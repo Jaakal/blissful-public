@@ -1,0 +1,59 @@
+.massage-link-inner-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px 20px;
+}
+
+.massage-link-inner-wrapper .classical-massage-image {
+  padding-bottom: 66.64%;
+  background-image: url("../images/classical-massage.jpeg");
+  background-size: cover;
+}
+
+.massage-link-inner-wrapper .sports-massage-image {
+  padding-bottom: 66.64%;
+  background-image: url("../images/sports-massage.jpeg");
+  background-size: cover;
+}
+
+.massage-link-inner-wrapper .lava-stone-massage-image {
+  padding-bottom: 66.67%;
+  background-image: url("../images/lava-stone-massage.jpeg");
+  background-size: cover;
+}
+
+.massage-link-inner-wrapper .pregnancy-massage-image {
+  padding-bottom: 66.64%;
+  background-image: url("../images/pregnancy-massage.jpeg");
+  background-size: cover;
+}
+
+.massage-link-inner-wrapper .dual-massage-image {
+  padding-bottom: 66.68%;
+  background-image: url("../images/dual-massage.jpeg");
+  background-size: cover;
+}
+
+.massage-link-inner-wrapper h1 {
+  margin: 25px 0;
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.massage-link-inner-wrapper .massage-short-description {
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: justify;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+/*# sourceMappingURL=MassageLink.css.map */

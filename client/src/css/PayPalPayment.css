@@ -1,0 +1,23 @@
+.paypal-button-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  margin: 20px 0 17px 0;
+}
+
+.paypal-button-wrapper .paypal-button-disabled-cover {
+  position: absolute;
+  top: 0;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.paypal-button-disabled {
+  pointer-events: none;
+}
+/*# sourceMappingURL=PayPalPayment.css.map */

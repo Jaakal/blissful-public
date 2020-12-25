@@ -1,0 +1,121 @@
+.booking-form-wrapper {
+  flex-basis: 50%;
+  overflow: hidden;
+
+  .floating-label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.15px;
+    color: #f8f2f2;
+  }
+}
+
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 40px 10px 40px 20px;
+
+  .select-wrapper,
+  .date-input-wrapper {
+    flex-basis: 100%;
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  input[type="date"] {
+    padding-right: 8px;
+  }
+  
+  ::-webkit-calendar-picker-indicator { 
+    background-image: url('../images/calendar.svg');
+    outline: none;
+  }
+
+  .arrow-down {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #c7c7c7;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  
+  select,
+  input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 45px;
+    padding-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.15px;
+    color: #c4c4c4;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #51b0c0;
+    outline: none;
+  
+    &:focus {
+      border-bottom: 1px solid #86edff;
+    }
+  }
+
+  input[disabled], select[disabled] {
+    border-bottom: 1px solid rgba($color: #51b0c0, $alpha: 0.3);
+  }
+
+  .price-value {
+    padding-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.payment-form-wrapper {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 40px 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 700px) {
+  .booking-form-wrapper {
+    flex-basis: 100%;
+
+    .booking-form {
+      padding: 40px 10px;
+    }
+  }
+  
+  .payment-form-wrapper {
+    flex-basis: 100%;
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .booking-form-wrapper {
+    .floating-label {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+#date-input-wrapper {
+  position: relative;
+}
+
+#open-date-picker-button {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/date-picker.svg");
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#date-picker-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 240px;
+  height: 319px;
+  background-color: #c7f0fe;
+  z-index: 99999;
+}
+
+#month-picker-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 44px;
+  left: 10px;
+  width: 200px;
+  height: 250px;
+  background-color: #6e69a5;
+}
+
+#month-picker-wrapper {
+  position: relative;
+  width: 190px;
+  height: 250px;
+  overflow: hidden;
+}
+
+#month-picker {
+  position: absolute;
+  height: 250px;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, -1525px, 0.01px);
+          transform: translate3d(0px, -1525px, 0.01px);
+}
+
+.year {
+  min-height: 25px;
+}
+
+.year-text {
+  width: 200px;
+  height: 25px;
+  padding: 5px;
+  border-bottom: 1px solid #000000;
+}
+
+.months {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 190px;
+  background-color: #56d3c9;
+  overflow: hidden;
+}
+
+.months .month {
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 2px;
+}
+
+.months .month:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.months-wrapper {
+  height: 0;
+  overflow: hidden;
+}
+
+.months {
+  height: 125px;
+  padding: 2px;
+}
+
+.months-active {
+  height: 125px;
+}
+
+#month-picker-scroll {
+  position: relative;
+  width: 10px;
+  background-color: burlywood;
+}
+
+#draggable-scroll {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 35px;
+  background-color: red;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.date-picker-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+/*# sourceMappingURL=Plugin.css.map */

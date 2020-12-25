@@ -1,0 +1,41 @@
+{
+  "name": "blissful",
+  "version": "1.0.0",
+  "description": "Body treatment franchise eCommerce app",
+  "main": "server.js",
+  "scripts": {
+    "install": "npm install --prefix client",
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": {
+    "node": "12.9.1",
+    "npm": "6.10.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaakal/blissful.git"
+  },
+  "author": "Jaak Kivinukk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jaakal/blissful/issues"
+  },
+  "homepage": "https://github.com/Jaakal/blissful#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.3.0",
+    "stripe": "^8.106.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}

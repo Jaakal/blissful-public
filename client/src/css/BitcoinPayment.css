@@ -1,0 +1,66 @@
+.bitcoin-button-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  height: 45px;
+}
+
+.bitcoin-button-wrapper .bitcoin-button-disabled-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.bitcoin-button-shorter {
+  height: 35px;
+}
+
+.bitcoin-button-disabled {
+  pointer-events: none;
+}
+
+.bitcoin-button-form {
+  width: 100%;
+  height: 100%;
+}
+
+.bitcoin-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #4C4C4C;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.bitcoin-button .bitcoin-logo-wrapper {
+  width: 72.25068px;
+}
+
+.bitcoin-button .bitcoin-logo {
+  width: 100%;
+  padding-top: 29.06%;
+  background-image: url("../images/bitcoin-logo.svg");
+  background-repeat: no-repeat;
+}
+
+.bitcoin-button:hover {
+  background-color: #474747;
+  cursor: pointer;
+}
+/*# sourceMappingURL=BitcoinPayment.css.map */

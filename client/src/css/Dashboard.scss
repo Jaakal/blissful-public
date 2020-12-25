@@ -1,0 +1,235 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 67px);
+
+  .headline {
+    margin: 100px 0 50px 0;
+    font-family: 'Poppins';
+    font-size: 50px;
+    font-weight: 600;
+    color: rgba($color: #ffffff, $alpha: 0.85);
+  }
+}
+
+.upcoming-bookings {
+  background-color: #5f4e52;
+
+  .booking:nth-of-type(odd) {
+    background-color: #4d3f42;
+    border-radius: 4px;
+  }
+}
+
+.passed-bookings {
+  background-color: #7e696e;
+
+  .booking:nth-of-type(odd) {
+    background-color: #68565a;
+    border-radius: 4px;
+  }
+}
+
+.upcoming-bookings,
+.passed-bookings {
+  width: 98%;
+  max-width: 1600px;
+  padding: 20px;
+  margin: 20px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: Min(1.3vw, 24px);
+  color: #f8f2f2;
+  border-radius: 4px;
+
+  .column-names {
+    display: flex;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-size: Min(1.35vw, 26px);
+    border-bottom: 1px solid #f8f2f2;
+    
+    .name {
+      flex-basis: 25%;
+    }
+
+    .booking-inner-wrapper {
+      flex-basis: 66.5%;
+      display: flex;
+
+      .city {
+        width: 25.5%;
+      }
+  
+      .address {
+        flex-basis: 44.5%;
+      }
+  
+      .start-time {
+        flex-basis: 15%;
+      }
+  
+      .duration {
+        flex-basis: 15%;
+      }
+    }
+
+    .date {
+      flex-basis: 8.5%;
+    }
+  }
+
+  .booking {
+    display: flex;
+    padding: 15px 20px;
+    
+    .name {
+      flex-basis: 25%
+    }
+
+    .booking-inner-wrapper {
+      flex-basis: 66.5%;
+      display: flex;
+
+      .city {
+        width: 25.5%;
+      }
+  
+      .address {
+        flex-basis: 44.5%;
+      }
+  
+      .start-time {
+        flex-basis: 15%;
+      }
+  
+      .duration {
+        flex-basis: 15%;
+      }
+
+      .city,
+      .address,
+      .start-time,
+      .duration {
+        display: flex;
+
+        .description-wrapper {
+          width: 0;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .date {
+      flex-basis: 8.5%;
+    }
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 700px) {
+  .dashboard-container {
+    .headline {
+      font-size: 7.5vw;
+    }
+  }
+
+  .upcoming-bookings,
+  .passed-bookings {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: Min(4vw, 24px);
+
+    .column-names {
+      flex-wrap: wrap;
+      padding: 7.5px 10px;
+      margin-bottom: 10px;
+      font-size: Min(5vw, 26px);
+
+      .name {
+        flex-basis: 70%;
+      }
+  
+      .booking-inner-wrapper {
+        flex-basis: 0%;
+        height: 0;
+        order: 3;
+        overflow: hidden;
+      }
+  
+      .date {
+        flex-basis: 30%;
+        order: 2;
+      }
+    }
+  
+    .booking {
+      flex-wrap: wrap;
+      padding: 15px 10px;
+      
+      .name {
+        flex-basis: 70%;
+        position: relative;
+
+        .arrow {
+          position: absolute;
+          top: 50%;
+          right: 5vw;
+          width: 0; 
+          height: 0; 
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 10px solid #c7c7c7;
+          pointer-events: none;
+          transform: translateY(-50%);
+        }
+      }
+
+      .booking-inner-wrapper {
+        flex-basis: 100%;
+        order: 3;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+
+        .city,
+        .address,
+        .start-time,
+        .duration {
+          width: 100%;
+          padding: 3px 6px;
+          color: #cccccc;
+
+          .description-wrapper {
+            flex-basis: 35%;
+            color: #fafafa;
+          }
+        }
+
+        .city {
+          padding-top: 23px;
+        }
+      }
+  
+      .date {
+        flex-basis: 30%;
+        order: 2;
+      }
+    }
+
+    .booking.open {
+      .name {
+        .arrow {
+          border-top: none;
+          border-bottom: 10px solid #c7c7c7;
+        }
+      }
+
+      .booking-inner-wrapper {
+        height: auto;
+      }
+    }
+  }
+}

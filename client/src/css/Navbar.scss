@@ -1,0 +1,121 @@
+@import 'variables';
+
+nav {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+  width: 100%;
+  padding: 10px 25px;
+  background-color: #9E8289;
+  border-bottom: 1px solid transparent;
+  z-index: 999999999999;
+
+  ul {
+    display: flex;
+
+    li:nth-of-type(1),
+    li:nth-of-type(2) {
+      margin-right: Min(2.8vw, 40px);
+    }
+  }
+
+  .navbar-link {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+
+    .logo-wrapper {
+      width: 140px;
+      padding-top: 31.62%;
+      margin-bottom: -8px;
+      background-image: url('../images/blissful-logo.svg');
+      background-repeat: no-repeat;
+    }
+    
+    .massages-wrapper {
+      width: $massage-icon-ratio-multiplier * $navbar-link-height;
+      margin-right: 3px;
+
+      .massages-icon {
+        padding-bottom: $navbar-link-height;
+        background-image: url('../images/massage.svg');
+        background-repeat: no-repeat;
+      }
+    }
+
+    .register-wrapper {
+      width: $register-icon-ratio-multiplier * $navbar-link-height;
+      margin-right: 3px;
+
+      .register-icon {
+        padding-bottom: ($navbar-link-height / ($register-icon-ratio-multiplier * $navbar-link-height)) * 100%;
+        background-image: url('../images/register.svg');
+        background-repeat: no-repeat;
+      }
+    }
+    
+    .login-wrapper {
+      width: $login-icon-ratio-multiplier * $navbar-link-height;
+      margin-right: 3px;
+
+      .login-icon {
+        padding-bottom: ($navbar-link-height / ($login-icon-ratio-multiplier * $navbar-link-height)) * 100%;
+        background-image: url('../images/login.svg');
+        background-repeat: no-repeat;
+      }
+    }
+
+    .logout-wrapper {
+      width: $logout-icon-ratio-multiplier * $navbar-link-height;
+      margin-right: 3px;
+
+      .logout-icon {
+        padding-bottom: ($navbar-link-height / ($logout-icon-ratio-multiplier * $navbar-link-height)) * 100%;
+        background-image: url('../images/logout.svg');
+        background-repeat: no-repeat;
+      }
+    }
+    
+    .dashboard-wrapper {
+      width: $navbar-link-height;
+      margin-right: 3px;
+
+      .dashboard-icon {
+        padding-bottom: 100%;
+        background-image: url('../images/dashboard.svg');
+        background-repeat: no-repeat;
+      }
+    }
+
+    span {
+      font-size: $navbar-link-height + 2px;
+      margin-bottom: -2px;
+    }
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 700px) {
+  .hide-sm {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    padding: 10px 10px;
+    
+    ul {
+      li:nth-of-type(1),
+      li:nth-of-type(2) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

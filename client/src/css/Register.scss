@@ -1,0 +1,193 @@
+.register-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  .register-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1200px;
+    padding: 40px 10px 40px 20px;
+    margin: 20px 0;
+    background-color: #7e696e;
+    border-radius: 4px;
+
+    .register-heading {
+      flex-basis: 100%;
+      margin-bottom: 50px;
+      font-family: 'Montserrat';
+      font-size: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba($color: #ffffff, $alpha: 0.9);
+    }
+
+    input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 45px;
+      width: 100%;
+      padding-left: 20px;
+      border: none;
+      background-color: transparent;
+  
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.15px;
+      color: rgba($color: #ffffff, $alpha: 0.75);
+      outline: none;
+
+      &:-webkit-autofill {
+        font-size: 16px;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.75);
+        caret-color: rgba(255, 255, 255, 0.75);
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+    
+    ::placeholder {
+      color: #9e9e9e;
+    }
+  }
+
+  .register-form-input-wrapper {
+    flex-basis: 48%;
+    position: relative;
+    margin-bottom: 25px;
+    border-bottom: solid 1px #51b0c0;
+
+    .floating-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 80%;
+      height: 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      letter-spacing: -0.15px;
+      color: #f8f2f2;
+      background-color: #7e696e;
+      pointer-events: none;
+    }
+
+    &:focus-within {
+      border-bottom: solid 1px #86edff;
+
+      .floating-label {
+        top: -12px;
+        font-size: 15px;
+      }
+    }
+
+    .floating-label.input-exists {
+      top: -12px;
+      font-size: 15px;
+    }
+  }
+
+  .submit-button-wrapper {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    .submit-register-form-button {
+      padding: 10px 25px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba($color: #ffffff, $alpha: 0.9);
+      background-color: rgba($color: #51b0c0, $alpha: 0.6);
+      border: none;
+      border: solid 1px transparent;
+      border-radius: 4px;
+      outline: 0;
+    
+      &:hover {
+        color: #86edff;
+        background-color: transparent;
+        border: solid 1px #86edff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .login-link-container {
+    display: flex;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+    color: rgba($color: #ffffff, $alpha: 0.7);
+
+    .login-link-wrapper {
+      position: relative;
+    }
+
+    .login-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      background-color: #9E8289;
+      white-space: nowrap;
+    }
+
+    a {
+      color: rgba($color: #51b0c0, $alpha: 0.9);
+      text-decoration: none;
+
+      &:hover {
+        letter-spacing: 1.4px;
+        color: rgba($color: #60d1e6, $alpha: 0.9);
+      }
+    }
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 700px) {
+  .register-container {
+    .register-form-input-wrapper {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .register-container {
+    .register-form-input-wrapper {
+      input {
+        font-size: 14px;
+        
+        &:-webkit-autofill {
+          font-size: 14px;
+        }
+      }
+
+      .floating-label {
+        font-size: 14px;
+      }
+
+      .floating-label.input-exists {
+        font-size: 13px;
+      }
+
+      &:focus-within {
+        .floating-label {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

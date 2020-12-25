@@ -1,0 +1,141 @@
+@import 'variables';
+
+#open-date-picker-button {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/date-picker.svg');
+  transform: translateY(-50%);
+}
+
+#date-picker-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 240px;
+  height: 319px;
+  background-color: $color-lighter-blue;
+  z-index: 99999;
+}
+
+.month-picker-button {
+  display: inline-block;
+  position: relative;
+  height: 14px;
+  padding-right: 15px;
+  margin: 10px;
+  background-color: $color-darker-blue;
+
+  .month {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .triangle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-width: 8px 5px 0 5px;
+    border-color: rgba($color: #000000, $alpha: 0.5) transparent transparent transparent;
+    border-style: solid;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.day-picker-container {
+  position: absolute;
+  top: 44px;
+  left: 10px;
+  width: 220px;
+  height: 265px;
+  background-color: red;
+}
+
+.month-picker-container {
+  display: flex;
+  position: absolute;
+  top: 44px;
+  left: 10px;
+  width: 220px;
+  height: 265px;
+  background-color: #6e69a5;
+  visibility: hidden;
+
+  .years-wrapper {
+    position: relative;
+    width: 190px;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .years-inner-wrapper {
+    position: absolute;
+    // width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: -25px;
+    overflow-y: scroll;
+  }
+
+  .year {
+    position: absolute;
+    width: 190px;
+    height: 25px;
+    padding: 5px;
+    border-bottom: 1px solid #000000;
+  }
+
+  .open-year-1,
+  .open-year-2 {
+    position: absolute;
+    // left: -1000px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 140px;
+    padding: 2px;
+    background-color: $color-darker-blue;
+    overflow: hidden;
+
+    .month {
+      flex-basis: 33.3%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      border-radius: 2px;
+
+      &:hover {
+        background-color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // .open-year-2 {
+  //   display: none;
+  //   height: 0;
+  //   overflow: hidden;
+  // }
+
+  .scrollbar-wrapper {
+    width: 30px;
+    height: 265px;
+    background-color: rosybrown;
+  }
+}
+
+.date-picker-hidden {
+  opacity: 0;
+  pointer-events: none;
+}

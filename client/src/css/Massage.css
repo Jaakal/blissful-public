@@ -1,0 +1,178 @@
+.massage-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.massage-wrapper h1 {
+  margin: 80px 0 40px;
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.massage-wrapper .description-wrapper {
+  max-width: 1200px;
+  width: 95%;
+  font-family: 'Poppins';
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-align: justify;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.massage-wrapper .description-wrapper p {
+  margin: 20px 0;
+}
+
+.massage-wrapper .description-wrapper ul {
+  margin-left: 25px;
+  list-style-type: circle;
+}
+
+.massage-wrapper .login-notice {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: Min(4vw, 24px);
+  font-family: 'Poppins';
+  color: #ce2828;
+}
+
+.open-booking-form-button {
+  position: relative;
+  padding: 10px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(81, 176, 192, 0.6);
+  border: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+}
+
+.open-booking-form-button .open-booking-form-button-inner-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.open-booking-form-button .close-sign {
+  position: relative;
+  width: 0;
+  height: 20px;
+  margin: -2px -15px 0 10px;
+  overflow: hidden;
+}
+
+.open-booking-form-button .close-sign span:nth-of-type(1),
+.open-booking-form-button .close-sign span:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.open-booking-form-button .close-sign span:nth-of-type(2) {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.open-booking-form-button .close-sign-visible {
+  width: 20px;
+}
+
+.open-booking-form-button:hover {
+  color: #86edff;
+  background-color: transparent;
+  border: 1px solid #86edff;
+  cursor: pointer;
+}
+
+.open-booking-form-button:hover .close-sign span {
+  background-color: #86edff;
+}
+
+.grand-form-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px 0;
+  background-color: #7e696e;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.grand-form-wrapper .close-grand-form-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.grand-form-wrapper .close-grand-form-button span:nth-of-type(1),
+.grand-form-wrapper .close-grand-form-button span:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.grand-form-wrapper .close-grand-form-button span:nth-of-type(2) {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.grand-form-wrapper .close-grand-form-button:hover {
+  cursor: pointer;
+}
+
+.grand-form-wrapper .close-grand-form-button:hover span {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.grand-form-wrapper.narrow {
+  max-width: 600px;
+}
+
+.grand-form-wrapper.narrow .booking-form-wrapper {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.grand-form-wrapper.narrow .booking-form-wrapper .booking-form {
+  padding: 40px 20px;
+}
+/*# sourceMappingURL=Massage.css.map */
