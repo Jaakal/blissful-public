@@ -1,6 +1,0 @@
-{
-  "jwtSecret": "",
-  "databasePassword": "",
-  "stripePublicKey": "",
-  "stripePrivateKey": ""
-}

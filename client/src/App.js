@@ -19,7 +19,7 @@ import Massage from './components/massages/Massage'
 
 import { loadUser } from './actions/auth'
 
-// const stripePromise = loadStripe('your stripe public key');
+const stripePromise = loadStripe('YOUR STRIPE PUBLIC KEY');
 
 const App = () => {
   useEffect(() => {

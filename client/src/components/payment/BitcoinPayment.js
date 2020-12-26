@@ -11,7 +11,7 @@ const BitcoinPayment = ({
   return (
     studioBodyTreatmentId &&
     <div className="bitcoin-button-wrapper">
-      <form className="bitcoin-button-form" method="POST" action="https://mainnet.demo.btcpayserver.org/apps/36m2vXqqDy2Q5uBZGyVThuSZqV92/pos">
+      <form className="bitcoin-button-form" method="POST" action="https://mainnet.demo.btcpayserver.org/apps/{YOUR APP ID}/pos">
         <input type="hidden" name="email" value="customer@example.com" />
         <input type="hidden" name="orderId" value="CustomOrderId" />
         <input type="hidden" name="notificationUrl" value="https://example.com/callbacks" />

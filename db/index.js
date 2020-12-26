@@ -9,11 +9,11 @@ const pool = isProduction ? new Pool({
     rejectUnauthorized: false
   }
 }) : new Pool({
-  user: 'your database user name',
+  user: config.get('databaseUser'),
   password: config.get('databasePassword'),
-  host: 'localhost',
-  port: 5432,
-  database: 'blissful'
+  host: config.get('databaseHost'),
+  port: config.get('databasePort'),
+  database: config.get('databaseName')
 })
 
 module.exports = {

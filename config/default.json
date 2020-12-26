@@ -1,6 +1,9 @@
 {
   "jwtSecret": "",
+  "databaseUser": "",
   "databasePassword": "",
-  "stripePublicKey": "",
+  "databaseHost": "",
+  "databasePort": "",
+  "databaseName": "",
   "stripePrivateKey": ""
 }
